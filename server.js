@@ -2,6 +2,11 @@ const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
 
+
+app.use(require("./routes/apiroutes.js"));
+ app.use(require("./routes/htmlroutes.js"));
+
+
 const PORT = process.env.PORT || 3000;
 
 // const User = require("./userModel.js");
@@ -20,6 +25,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
     useUnifiedTopology: true
  });
 
+
 // app.post("/submit", ({ body }, res) => {
 //   User.create(body)
 //     .then(dbUser => {
@@ -29,6 +35,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
 //       res.json(err);
 //     });
 // });
+
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
