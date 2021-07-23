@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const { aggregate } = require("../models/workout.js");
 const Workout = require("../models/workout.js");
-const Transaction = require("../models/workout.js");
 
 
 
