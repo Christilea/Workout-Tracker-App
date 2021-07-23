@@ -6,7 +6,7 @@ const Workout = require("../models/workout.js");
 
 
 
-router.post("/workout", ({ body }, res) => {
+router.post("/api/workouts", ({ body }, res) => {
   Workout.create(body)
     .then(dbWorkout => {
       res.json(dbWorkout);
@@ -16,7 +16,7 @@ router.post("/workout", ({ body }, res) => {
     });
 });
 
-router.post("/workout/range", ({ body }, res) => {
+router.post("/api/workouts/range", ({ body }, res) => {
   Workout.insertMany(body)
     .then(dbWorkout => {
       res.json(dbWorkout);
@@ -33,9 +33,9 @@ router.put()
 
 
 
-router.get("/workout/range", (req, res) => {
+router.get("/api/workouts/range", (req, res) => {
     
-    aggregate
+   Workout.aggregate
 
   
     .then(dbWorkout => {
@@ -46,7 +46,7 @@ router.get("/workout/range", (req, res) => {
     });
 });
 
-router.get("/workout", (req, res) => {
+router.get("/api/workouts", (req, res) => {
     aggregate
 }
 

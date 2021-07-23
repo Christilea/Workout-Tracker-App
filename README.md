@@ -16,7 +16,7 @@ This application is a MongoDB fitness tracker. The application should allow the 
 
 - A Workout Tracker to allow users to keep track of daily cardio and resistance workouts.
 - Add to a recent workout or create a new one
--
+
 
 ## Installation
 - Node.js
