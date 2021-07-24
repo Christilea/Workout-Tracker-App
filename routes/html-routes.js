@@ -1,3 +1,4 @@
+const cool = require('cool-ascii-faces');
 const path = require("path");
 const router = require("express").Router();
 

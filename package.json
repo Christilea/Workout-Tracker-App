@@ -1,7 +1,7 @@
 {
   "name": "mongoose_skeleton",
   "version": "1.0.0",
-  "description": "",
+  "description": "This application is a MongoDB fitness tracker. The application should allow the user to add exercises to a previous workout, add new exercises to a workout, and generate a Stats page. Information is saved in the database and can be viewed later.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,11 +9,21 @@
     "watch": "nodemon server.js",
     "seed": "node seeders/seed.js"
   },
-  "author": "",
+  "author": "Christi Lea",
   "license": "ISC",
   "dependencies": {
+    "cool-ascii-faces": "^1.3.4",
     "express": "^4.16.3",
     "mongoose": "^5.3.16",
     "morgan": "^1.9.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Christilea/Workout-Tracker-App.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Christilea/Workout-Tracker-App/issues"
+  },
+  "homepage": "https://github.com/Christilea/Workout-Tracker-App#readme"
 }
