@@ -4,8 +4,6 @@
 
 
 
-
-
 // router.post("/api/workouts", ({ body }, res) => {
 //   Workout.create(body)
 //     .then(dbWorkout => {
@@ -27,7 +25,20 @@
 // });
 
 
-// router.put()
+// router.put('/workouts/:id', (req, res) => {
+// 	// Workout.where({ _id: mongojs.ObjectId(req.params.id) })
+//     .update({
+//         $push: {
+//             exercises: [req.body],
+//         },
+//     })
+//     .then((dbWorkout) => {
+//         res.json(dbWorkout);
+//     })
+//     .catch((err) => {
+//         res.status(400).json(err);
+//     });
+// });
 
 
 
