@@ -1,44 +1,44 @@
 const db = require("../models");
 const router = require("express").Router();
 
-app.get("/api/workouts", function (req, res) {
-    db.Workout.find({}).then(function (dbWorkout) {
+app.get("/api/workouts", (req, res) {
+    db.Workout.find({}).then (dbWorkout) {
         res.json(dbWorkout);
     }).catch(err => {
         res.json(err);
     })
-})
+}
 
 app.get("/api/workouts/range", (req, res) => {
-    db.Workout.find({}).then(function (dbWorkout) {
+    db.Workout.find({}).then(dbWorkout) {
         res.json(dbWorkout);
     }).catch(err => {
         res.json(err);
     });
-})
+}
 
 
-app.get("/api/workouts/:id", function (req, res) {
+app.get("/api/workouts/:id",(req, res) {
     var id = req.params.id;
-    db.Workout.findById(id, function (err, dbWorkout) {
+    db.Workout.findById(id,(err, dbWorkout) {
     }).catch(err => {
         res.json(err);
     });
 })
 
-app.post("/api/workouts/", function (req, res) {
-    db.Workout.create({ exercise: req.body }).then(function (dbWorkout) {
+app.post("/api/workouts/",(req, res) {
+    db.Workout.create({ exercise: req.body }).then(dbWorkout) {
         res.json(dbWorkout);
     }).catch(err => {
         res.json(err);
     })
-})
+}
 
-app.put("/api/workouts/:id", function (req, res) {
+app.put("/api/workouts/:id",(req, res) {
     var query = { _id: req.params.id };
     db.Workout.findOneAndUpdate(query, {
         $push: { exercises: [req.body] }
-    }, function (err, dbWorkout) {
+    },(err, dbWorkout) {
         if (err) {
             res.json(err);
         } else {
