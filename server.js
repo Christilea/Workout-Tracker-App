@@ -2,13 +2,15 @@ const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
 
-app.use(require("./routes/api-routes.js"));
-app.use(require("./routes/html-routes.js"));
+
 
 const PORT = process.env.PORT || 3000;
 
 // const User = require("./userModel.js");
 const app = express();
+
+app.use(require("./routes/api-routes.js"));
+app.use(require("./routes/html-routes.js"));
 
 app.use(logger("dev"));
 
@@ -21,7 +23,7 @@ mongoose.connect(
   process.env.MONGODB_URI || 'mongodb://localhost/deep-thoughts', { 
     useNewUrlParser: true,
     useFindAndModify: false,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
     useFindAndModify: false
 });
 
